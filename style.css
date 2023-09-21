@@ -1,0 +1,158 @@
+/* Estilização geral do site */
+body {
+    font-family: "Arial";
+    margin: 0;
+    padding: 0;
+    border: 0;
+    /* background-color: #c02a31; */
+
+}
+
+
+/* estilização do header da página */
+header {
+    background-color: whitesmoke;
+    
+}
+
+/* estilização do logotipo */
+.logo {
+    height: 60px;
+    width: 60px;
+    margin-left: 100px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+
+/* estilização do menu */
+nav {
+    right: 0;
+    position: absolute;
+    top: 25px;
+    left: 160px;
+
+}
+
+nav li {
+    display: inline;
+    /* para a direção das margens, em cima, direita, pra baixo e esquerda (sentido do relógio)  */
+    margin: 0 0 0 50px;
+}
+
+nav a {
+    text-transform: uppercase;
+    color: rgb(24, 21, 18);
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+nav a:hover { 
+    color: #c02a31;
+    text-decoration: underline ;
+}
+.logo_caixa { 
+    width: 940px;
+    position: relative;
+    margin: auto;
+}
+
+/* estilização do banner/fundo */
+.fundo { 
+     width: 100%;;  
+/* com o 100% ele é ajustado de acordo com o tamanho da página  */
+
+}
+
+/* estilização da imagem do nosso serviço */
+.servico { 
+    height: 50%;
+    width: 60%;
+    float: left;
+    margin: 0 20px 50px;
+    
+}
+
+.titulo_serv {
+    clear: left;
+    text-align: center;
+ /* 2em é uma medida padrão, pode ser encontrado em outras programações */
+    font-size: 2em;
+    
+
+}
+
+.area_serv { 
+    width: 90%;
+    text-align: justify;
+    margin: auto;
+    background-color: whitesmoke;
+    margin-bottom: 20%;
+}
+
+
+/* Titulos - padrao  */
+.titulo_padrao {
+
+    /* padding é o espaçamento  */
+
+    padding: 2%;
+    text-align: center;
+    font-size: 40px;
+    margin: 0;
+}
+
+/* estilização da sessao do mapa */
+
+.mapa{
+    background:linear-gradient( whitesmoke,  #c02a31);
+   
+}
+
+
+.mapa p {
+    text-align: center;
+    color: whitesmoke;
+}
+
+.mapa iframe {
+    display: block;
+    margin: auto;
+  
+    
+}
+
+.beneficios { 
+    background-color: #c02a31;
+    float: right;
+    
+}
+
+.conteudo_beneficios {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.lista_beneficios {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    list-style: "🍄";
+    
+    
+}
+
+.itens { 
+    line-height: 2;
+
+}
+.img_beneficios {
+    width: 50%;
+    margin-left: 30%;
+    margin-top: 0%;
+  
+    
+}
+
+    
