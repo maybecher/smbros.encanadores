@@ -5,6 +5,7 @@ body {
     padding: 0;
     border: 0;
     /* background-color: #c02a31; */
+    background-color: whitesmoke;
 
 }
 
@@ -12,7 +13,7 @@ body {
 /* estilização do header da página */
 header {
     background-color: whitesmoke;
-    
+
 }
 
 /* estilização do logotipo */
@@ -48,47 +49,51 @@ nav a {
     text-decoration: none;
 }
 
-nav a:hover { 
+nav a:hover {
     color: #c02a31;
-    text-decoration: underline ;
+    text-decoration: underline;
 }
-.logo_caixa { 
+
+.logo_caixa {
     width: 940px;
     position: relative;
     margin: auto;
 }
 
 /* estilização do banner/fundo */
-.fundo { 
-     width: 100%;;  
-/* com o 100% ele é ajustado de acordo com o tamanho da página  */
+.fundo {
+    width: 100%;
+    ;
+    /* com o 100% ele é ajustado de acordo com o tamanho da página  */
 
 }
 
 /* estilização da imagem do nosso serviço */
-.servico { 
+.servico {
     height: 50%;
     width: 60%;
     float: left;
     margin: 0 20px 50px;
-    
+
 }
 
 .titulo_serv {
     clear: left;
     text-align: center;
- /* 2em é uma medida padrão, pode ser encontrado em outras programações */
+    /* 2em é uma medida padrão, pode ser encontrado em outras programações */
     font-size: 2em;
     
 
+
 }
 
-.area_serv { 
+.area_serv {
     width: 90%;
     text-align: justify;
     margin: auto;
     background-color: whitesmoke;
-    margin-bottom: 20%;
+    margin-bottom: 11%;
+    margin-top: 2%;
 }
 
 
@@ -105,54 +110,86 @@ nav a:hover {
 
 /* estilização da sessao do mapa */
 
-.mapa{
-    background:linear-gradient( whitesmoke,  #c02a31);
-   
+.mapa {
+    background: linear-gradient(whitesmoke, #c02a31);
+
 }
 
 
 .mapa p {
     text-align: center;
-    color: whitesmoke;
+    
 }
 
 .mapa iframe {
     display: block;
     margin: auto;
-  
-    
+
+
 }
 
-.beneficios { 
+.beneficios {
     background-color: #c02a31;
     float: right;
-    
+
 }
 
 .conteudo_beneficios {
     width: 80%;
-    margin: 0 auto;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
 }
 
 .lista_beneficios {
     width: 50%;
     display: inline-block;
-    vertical-align: top;
+    margin-left: 21%;
     list-style: "🍄";
-    
-    
+    transition: 400ms;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    color: whitesmoke;
+    letter-spacing: 2px;
+    font-size: medium;
 }
 
-.itens { 
+.itens {
     line-height: 2;
 
 }
+
 .img_beneficios {
-    width: 50%;
-    margin-left: 30%;
-    margin-top: 0%;
-  
+    width: 32%;
+    margin-right: 21%;
+    margin-top: 0;
+    box-shadow: 10px 10px 5px 0px black;
+    padding-top: 0%;
+    transition: 400ms;
+
+}
+
+.img_beneficios:hover {
+    opacity:0.7;
+
+}
+
+.video_cano { 
+    padding:5%;
+    text-align: center;
+
+}
+
+.rodape { 
+    background-color: black;
     
 }
 
-    
+.img_rodape { 
+    padding: 2%;
+    height: 5%;
+    margin-left: 70%;
+    margin-bottom: 5%;
+}
