@@ -4,19 +4,15 @@ body {
     margin: 0;
     padding: 0;
     border: 0;
-    /* background-color: #c02a31; */
     background-color: whitesmoke;
-
 }
 
-
-/* estilização do header da página */
+/* Estilização do header da página */
 header {
     background-color: whitesmoke;
-
 }
 
-/* estilização do logotipo */
+/* Estilização do logotipo */
 .logo {
     height: 60px;
     width: 60px;
@@ -25,19 +21,16 @@ header {
     margin-bottom: 25px;
 }
 
-
-/* estilização do menu */
+/* Estilização do menu */
 nav {
     right: 0;
     position: absolute;
     top: 25px;
     left: 160px;
-
 }
 
 nav li {
     display: inline;
-    /* para a direção das margens, em cima, direita, pra baixo e esquerda (sentido do relógio)  */
     margin: 0 0 0 50px;
 }
 
@@ -54,37 +47,42 @@ nav a:hover {
     text-decoration: underline;
 }
 
-.logo_caixa {
-    width: 940px;
-    position: relative;
-    margin: auto;
+/* Estilização do carrossel */
+.slide-show {
+    overflow: hidden;
 }
 
-/* estilização do banner/fundo */
-.fundo {
+.slides-list {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
     width: 100%;
-    ;
-    /* com o 100% ele é ajustado de acordo com o tamanho da página  */
-
+    flex: 0 0 auto;
 }
 
-/* estilização da imagem do nosso serviço */
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.slide-controller:nth-child(1):checked ~ .slide-show .slides-list {--selected-item: 0;}
+.slide-controller:nth-child(2):checked ~ .slide-show .slides-list {--selected-item: 1;}
+.slide-controller:nth-child(3):checked ~ .slide-show .slides-list {--selected-item: 2;}
+
+/* Estilização da imagem do nosso serviço */
 .servico {
     height: 50%;
     width: 60%;
     float: left;
     margin: 0 20px 50px;
-
 }
 
 .titulo_serv {
     clear: left;
     text-align: center;
-    /* 2em é uma medida padrão, pode ser encontrado em outras programações */
     font-size: 2em;
-    
-
-
 }
 
 .area_serv {
@@ -96,42 +94,32 @@ nav a:hover {
     margin-top: 2%;
 }
 
-
 /* Titulos - padrao  */
 .titulo_padrao {
-
-    /* padding é o espaçamento  */
-
     padding: 2%;
     text-align: center;
     font-size: 40px;
     margin: 0;
 }
 
-/* estilização da sessao do mapa */
-
+/* Estilização da sessão do mapa */
 .mapa {
     background: linear-gradient(whitesmoke, #c02a31);
-
 }
-
 
 .mapa p {
     text-align: center;
-    
 }
 
 .mapa iframe {
     display: block;
     margin: auto;
-
-
 }
 
+/* Estilização da sessão de benefícios */
 .beneficios {
     background-color: #c02a31;
     float: right;
-
 }
 
 .conteudo_beneficios {
@@ -141,7 +129,6 @@ nav a:hover {
     justify-content: center;
     align-items: center;
     flex-direction: row;
-
 }
 
 .lista_beneficios {
@@ -150,7 +137,7 @@ nav a:hover {
     margin-left: 21%;
     list-style: "🍄";
     transition: 400ms;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: whitesmoke;
     letter-spacing: 2px;
     font-size: medium;
@@ -158,7 +145,6 @@ nav a:hover {
 
 .itens {
     line-height: 2;
-
 }
 
 .img_beneficios {
@@ -168,124 +154,210 @@ nav a:hover {
     box-shadow: 10px 10px 5px 0px black;
     padding-top: 0%;
     transition: 400ms;
-
 }
 
 .img_beneficios:hover {
-    opacity:0.7;
-
+    opacity: 0.7;
 }
 
-.video_cano { 
-    padding:5%;
+.video_cano {
+    padding: 5%;
     text-align: center;
-
 }
 
-.rodape { 
+.rodape {
     background-color: black;
-    
+    color: whitesmoke;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.img_rodape { 
-    padding: 2%;
-    height: 5%;
-    margin-left: 70%;
-    margin-bottom: 5%;
+.img_rodape {
+    height: 50px;
+    margin-right: 50px;
 }
 
+.contato {
+    text-align: left;
+    margin-left: 150px;
+}
 
+.contato p {
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+}
 
-
-
-
-
-
-
-
-/* style page services */
-
+/* Estilização da sessão de planos de assinatura */
 .intr_serv {
     background-color: #c02a31;
-    padding-bottom: 20%;
-    padding-top: 2%;
-    
-    
-    
-}
-
-.planos {
-    color: whitesmoke;
-    padding-top: 0%;
-    text-align: center;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
-    font-size: 40px;
+    padding: 2% 0;
+    text-align: center; /* Centraliza o texto "Planos de Assinatura" */
 }
 
 .planos_assinatura {
-    display: flex; /*Torna o contêiner flexível
-    /* justify-content: center; Centraliza os ícones horizontalmente */
-    align-items: center; /* Centraliza os ícones verticalmente */
-    padding-left: 2%;
-    padding-right: 5%;
-    
-  }
-  
-.plano_A {
-    font-size: 24px;
-    border: 3px solid #1d9619;
-    padding: 10px;
-    margin: 5px; /* Adiciona um espaçamento entre os ícones */
-    background-color: whitesmoke;
-    text-align: center;
-    border-radius: 5%;
-  }
-  
-  .img_planoA { 
-    width: 75PX;
-    
-  }
-
-  .plano_B {
-    font-size: 24px;
-    border: 3px solid #18689e;
-    padding: 10px;
-    margin: 5px; /* Adiciona um espaçamento entre os ícones */
-    background-color: whitesmoke;
-    text-align: center;
-    border-radius: 5%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
-  
-  .img_planoB { 
-    width: 75px;
-  }
 
-  .plano_C {
-    font-size: 24px;
-    border: 3px solid #c4a703;
-    padding: 10px;
-    margin: 5px; /* Adiciona um espaçamento entre os ícones */
-    background-color: whitesmoke;
-    text-align: center;
-    border-radius: 5%;
-  }
-  
-  .img_planoC { 
-    width: 75PX;
-  }
+.plano {
+    width: 30%;
+    margin: 2% 0;
+    padding: 2%;
+    background-color: #ffffff; /* Fundo branco */
+    color: #c02a31; /* Cor do texto */
+    border: 2px solid #c02a31; /* Borda vermelha */
+    border-radius: 15px; /* Bordas arredondadas */
+    transition: transform 0.3s ease-in-out; /* Adiciona uma transição suave ao plano */
+}
 
-  .plano_p { 
-    text-align: center;
-    margin-left: 20%;
-    margin-right: 20%;
-    color: #c02a31;
-    
-  }
+/* Estilização quando o mouse passa sobre o plano */
+.plano:hover {
+    transform: scale(1.05); /* Aumenta um pouco o tamanho do plano */
+}
 
-  .planos_beneficios { 
-    text-align: justify;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 2%;
-    margin-right: 3%;
+.plano h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.plano img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.plano_p {
     font-size: 20px;
-  }
+    margin-bottom: 10px;
+    color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.planos_beneficios {
+    list-style-type: none;
+    padding: 0;
+    display: inline-block;
+
+}
+
+.vantagens {
+    font-size: 0.9em;
+    text-align: left;
+   
+}   
+
+.cadastro-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+
+.reviews-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #c02a31;
+}
+
+.review-card {
+    max-width: 300px;
+    margin: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+}
+
+.review-card:hover {
+    transform: scale(1.05);
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.review-content h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.review-content .review-text {
+    font-size: 1em;
+    color: #555;
+}
+
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    text-align: center;
+}
+
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
